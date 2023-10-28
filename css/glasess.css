@@ -1,0 +1,494 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+/*variable*/
+:root{
+    --main-color:white;
+    --secound-color:#f4f4f4;
+    --th-color:black;
+    --small-color:#5f5b5b;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+}
+.container{
+    padding-left:15px ;
+    padding-right:15px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small */
+@media (min-width : 768px) {
+    .container{
+        width: 760px;
+    }
+}
+/* mediam */
+@media (min-width : 992px) {
+    .container{
+        width: 980px;
+    }
+}
+/* large */
+@media (min-width :1200px) {
+    .container{
+        width: 1190px;
+    }
+}
+@media (min-width :1400px) {
+    .container{
+        width: 1350px;
+    }
+}
+
+/*header*/
+header nav{
+    background-color:#1478c7;
+    display: grid;
+    grid-template-columns: 57% 10% 33%;
+    position: relative;
+    height: 50px;
+}
+@media(max-width: 1200px){
+    header nav{
+        display: grid;
+        grid-template-columns: 45% 15% 40%;
+    }
+}
+header nav p{
+    text-align: center;
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 400;
+    margin-top: 12px;
+    word-spacing: 2.7px;
+}
+header .social{
+    color: var(--main-color);
+    position: relative;
+    top: 50%;
+    transform: translatey(-33%);
+}
+header .social i{
+    padding: 10px;
+}
+
+header nav .info{  
+    position: relative;
+    top: 50%;
+    transform: translatey(-19%);
+
+}
+header nav .info a{
+    color: var(--main-color);
+    text-decoration: none;
+    padding-left:15px;
+}
+header nav .info .icon{
+    color: var(--main-color);
+    padding-right: 14px;
+    padding-left: 5px;
+}
+@media(max-width: 900px){
+    header nav{
+        display: none;
+    }
+}
+/*nav-2*/
+header .nav-2{
+    display: grid;
+    grid-template-columns: 13% 70% 17%;
+    background-color: var(--secound-color);
+    height: 65px;
+    
+}
+header .nav-2 .icon-2 i{
+    position: relative;
+    top: 28%;
+    left: 10%;
+    margin: 0 10px;
+}
+header .nav-2 ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .nav-2 ul li{
+    padding: 20px 25px;
+    list-style: none;
+
+}
+header .nav-2 ul a{
+    text-decoration: none;
+    color: var(--th-color);
+    font-size: 17px;
+    font-weight: 700;
+}
+header .nav-2 .logo a{
+    text-decoration: none;
+    color: var(--th-color);
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    right: -90px;
+    top: 28%;
+}
+
+@media(max-width: 1000px){
+    header .nav-2{
+        display: flex;
+        justify-content: space-between;
+    }
+    header .nav-2 .logo a{
+        display: none   ;
+    }
+    header .nav-2 ul {
+        display:flex;
+        flex-direction: column;
+        position: absolute;
+        top: 66px;
+        left: -40px;
+        background-color: var(--secound-color);
+        z-index: 2;
+        opacity: 95%;
+    }
+
+    header .nav-2 ul li {
+        border: 1px solid #ddd;
+    }
+    header .nav-2 .logo i{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+        padding-top: 21px;
+    }
+    
+}
+header .nav-2 .logo i:hover{
+    color: red;
+}
+@media(min-width: 1000px){
+    header .nav-2 .logo i{
+        display: none;
+    }
+
+}
+/* main*/
+main .container .image{
+    max-width: fit-content;
+}
+
+
+main .container img{
+    width: 100%;
+    position: relative;
+    top: 50px;
+}
+main .container .button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 50px;
+    padding-right: 30px;
+}
+main .container .button a{
+    z-index: 1;
+    text-decoration: none;
+    color: var(--th-color);
+    background-color: var(--main-color);
+    width: 120px;
+    height: 37px;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 15px;
+}
+.spical-headding{
+    position: relative;
+    top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.services .container .serv{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 15px;
+}
+
+.services .container .buttons{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px;
+    justify-items: center;
+
+}
+.services .container .buttons a{
+    text-decoration: none;
+    color: var(--th-color);
+    background-color: var(--main-color);
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 7px;
+    border-radius: 15px;
+}
+@media(max-width: 1000px){
+    .services .container .serv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .services .container .serv img{
+        width: 600px;
+        height: 600px;
+
+    }
+    .services .container .buttons{
+        display: none;
+    }
+
+}
+@media(max-width: 1000px){
+    .services .container .serv img{
+        width: 400px;
+        height: 400px;
+
+    }
+}
+.services .container .choise{
+    display: flex;
+    justify-content: center;
+}
+.services .container .choise a{
+    padding: 25px 33px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--small-color);
+}
+.services .container .choise a:first-child:hover{
+    color: var(--th-color);
+    text-decoration: underline;
+}
+.services .container .choise a:nth-child(2):hover{
+    color: var(--th-color);
+    text-decoration: underline;
+}
+.services .container .choise a:last-child,
+.services .container .choise a:last-child:hover{
+    color: var(--th-color);
+    text-decoration: underline;
+}
+.services .container .shooping{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px;
+}
+
+
+.services .container .shooping img{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    transition: .4s;
+}
+.services .container .shooping .info{
+    position: relative;
+}
+.services .container .shooping .info h3{
+    text-align: center;
+    margin: 10px 0 10px;
+}
+.services .container .shooping .info p{
+    text-align: center;
+}
+.services .container .shooping .info span{
+    text-decoration: line-through;
+    color: red;
+    margin-right: 5px;
+}
+.services .container .shooping .ph{
+    overflow: hidden;
+}
+.services .container .shooping img:hover{
+    width: 100%;
+    height: auto;
+    transform: scale(1.03);
+}
+
+.services .container .lens{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.services .container .lens .ph{
+    margin-top: 35px;
+    overflow: hidden;
+}
+.services .container .lens img{
+    position: relative;
+    top: 0;
+    transition: .4s;
+}
+.services .container .lens .cap{
+    text-align: center;
+}
+.services .container .lens a{
+    text-decoration: none;
+    color: var(--th-color);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.services .container .lens img:hover{
+    width: 100%;
+    height: auto;
+    transform: scale(1.03);
+}
+/**/
+.services .container .quality {
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    grid-gap: 20px;   
+    padding-top: 85px;
+    padding-bottom: 45px;
+}
+.services .container .box{
+     display: flex;
+     justify-content: center;
+
+     background-color: var(--secound-color);
+}
+.services .container .ex .serv{
+    text-align: center;
+    margin: 10px 0 10px 10px;
+}
+.services .container .ex .serv h2{
+    font-weight: 500;
+}
+.services .container .serv p{
+    color: var(--small-color);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 7px;
+    text-align: center;
+}
+.services .container .ex i{
+    margin: 23px 20px;
+    font-size: 25px;
+    color: #053b65; 
+}
+@media(max-width: 1000px){
+    .services .container .quality{
+        grid-template-columns: repeat(auto-fit, minmax(345px,1fr));
+
+    }
+}
+/**/
+.services .container .information{
+    background-color: var(--secound-color);
+    margin: 50px 0;
+    padding-bottom: 40px;
+}
+.services .container .information h1{
+    text-align: center;
+    padding-top: 35px;
+}
+.services .container .information .big{
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    grid-gap: 20px;   
+    padding-top: 30px; 
+}
+.services .container .information .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.services .container .information .info i{
+    font-size: 25px;
+    color: #053b65;
+}
+.services .container .information .info h2{
+    text-align: center;
+    margin: 10px;
+    font-size: 21px;
+}
+.services .container .information .info p{
+    text-align: center;
+    margin-bottom: 5px;
+    color: var(--small-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+/**/
+footer .container .foot{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-gap: 20px;
+    background-color: var(--secound-color);
+    padding: 30px 15px;
+    margin-top: 100px;
+}
+footer .container .foot .content h3{
+    text-align: center;
+    margin-bottom: 12px;
+    border-bottom: #00000045 solid 1px;
+    padding-bottom: 3px;
+}
+footer .container .foot .content li{
+    font-weight: 500;
+    list-style-type: none;
+    text-align: center;
+    padding-right: 35px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+footer .container .foot .content a{
+    text-decoration: none;
+    color: var(--small-color);
+    transition: .4s;
+}
+footer .container .foot .content p{
+    font-weight: 500;
+    text-align: center;
+    padding-right: 35px;
+    padding-bottom: 5px;
+    color: var(--small-color);
+    font-size: 15px;
+    line-height: 1.4;
+}
+footer .container .foot .content .icon{
+    text-align: center;
+    padding: 5px;
+}
+footer .container .foot .content .icon a{
+    padding: 7px;
+}
+footer .container .foot .content a:hover{
+    color: #000000a3;
+    font-weight: 700;
+    text-decoration: underline;
+
+}
+
+
+
+
+
